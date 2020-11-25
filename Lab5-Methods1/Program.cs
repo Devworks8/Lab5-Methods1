@@ -125,14 +125,10 @@ namespace Lab5Methods1
         private static long TimeDeltaTest ( int numOne, int numTwo, bool isRecursive)
         {
             DateTime start = DateTime.Now;
-            if (isRecursive)
-            {
-                GcdRecursive(numOne, numTwo);
-            }
-            else
-            {
-                Gcd(numOne, numTwo);
-            }
+
+            if (isRecursive) GcdRecursive(numOne, numTwo);
+            else Gcd(numOne, numTwo);
+
             DateTime end = DateTime.Now;
             return (long)(end - start).TotalMilliseconds;
         }
